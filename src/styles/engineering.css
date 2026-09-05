@@ -1,0 +1,173 @@
+.engineering-section {
+  padding: var(--spacing-4xl) 0;
+  background: radial-gradient(circle at 20% 50%, rgba(227, 27, 35, 0.08) 0%, rgba(15, 16, 18, 0.98) 70%),
+              var(--color-bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.eng-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--border-medium);
+  padding: 6px 12px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+}
+
+.eng-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.eng-desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text-muted);
+  max-width: 620px;
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* Grid de Pilares Tecnológicos */
+.eng-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.eng-card {
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.eng-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition-normal);
+}
+
+.eng-card:hover {
+  border-color: var(--border-medium);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.eng-card:hover::before {
+  width: 100%;
+}
+
+.eng-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-xs);
+  background: var(--color-bg);
+  border: 1px solid var(--border-medium);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.eng-card-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.eng-card-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Banner de Test-Ride / Custom Paddock */
+.eng-banner {
+  background: linear-gradient(135deg, #1F2127 0%, #121316 100%);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.eng-banner::after {
+  content: '';
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.banner-content h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.banner-content p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  max-width: 540px;
+}
+
+@media (max-width: 1100px) {
+  .eng-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .eng-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .eng-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
