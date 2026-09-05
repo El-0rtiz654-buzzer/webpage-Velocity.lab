@@ -1,0 +1,533 @@
+.studio-section {
+  padding: var(--spacing-xl) 0 var(--spacing-4xl);
+  background: radial-gradient(circle at 50% 30%, rgba(227, 27, 35, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.02) 0%, transparent 40%),
+              var(--color-bg);
+  min-height: calc(100vh - 80px);
+}
+
+/* Studio Header */
+.studio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.studio-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.studio-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+}
+
+.studio-header-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-text-muted);
+  max-width: 500px;
+}
+
+/* Studio Main Workspace Grid */
+.studio-workspace-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+/* Visual Stage / Paddock Showcase */
+.studio-stage-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  position: sticky;
+  top: 100px;
+}
+
+.studio-visual-card {
+  background: radial-gradient(circle at center, #23262E 0%, #121316 90%);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 50px rgba(0, 0, 0, 0.9);
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.studio-stage-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  box-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+/* Central Image Container */
+.studio-bike-frame {
+  margin: auto 0;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.studio-bike-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xs);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: contrast(108%);
+}
+
+.studio-visual-card:hover .studio-bike-frame img {
+  transform: scale(1.03);
+}
+
+/* Laser Engraving Plate */
+.laser-engraving-plate {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  background: rgba(18, 19, 22, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.laser-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+.laser-plate-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Studio Real-time Telemetry Dashboard */
+.studio-telemetry-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.telemetry-block {
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.telemetry-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.telemetry-val {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+}
+
+.telemetry-val.highlight {
+  color: var(--color-primary);
+}
+
+/* Right Configurator Steps Column */
+.studio-config-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Step Navigation Tabs */
+.config-steps-nav {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.step-nav-btn {
+  padding: 8px 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.step-nav-btn:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-hover);
+}
+
+.step-nav-btn.active {
+  background: var(--color-primary);
+  color: #FFF;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+/* Active Step Card */
+.config-active-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.panel-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.panel-counter {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Choice Cards Grid */
+.option-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-select-card {
+  background: var(--color-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.option-select-card:hover {
+  border-color: var(--border-medium);
+  background: var(--color-surface-hover);
+  transform: translateX(4px);
+}
+
+.option-select-card.active {
+  border-color: var(--color-primary);
+  background: var(--color-surface-hover);
+  box-shadow: 0 0 16px rgba(227, 27, 35, 0.15);
+}
+
+.option-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.option-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.option-sub {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.option-price-tag {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* Color Circles Grid */
+.colors-grid-studio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.color-choice-box {
+  background: var(--color-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.color-choice-box:hover {
+  border-color: var(--border-medium);
+}
+
+.color-choice-box.active {
+  border-color: var(--color-primary);
+  background: var(--color-surface-hover);
+}
+
+.color-swatch-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+/* Text Inputs / Laser Engraving Box */
+.studio-input-wrap {
+  margin-top: 14px;
+}
+
+.studio-input-wrap label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.studio-text-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--color-bg);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+}
+
+.studio-text-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+/* Cockpit Pickers Grid */
+.cockpit-select-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cockpit-item label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.studio-dropdown {
+  width: 100%;
+  padding: 12px;
+  background: var(--color-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.studio-dropdown:focus {
+  border-color: var(--color-primary);
+}
+
+/* Checkbox Toggle Addons */
+.addon-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--color-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all var(--transition-fast);
+}
+
+.addon-toggle-row:hover {
+  border-color: var(--border-medium);
+}
+
+.addon-toggle-row.active {
+  border-color: var(--color-primary);
+  background: var(--color-surface-hover);
+}
+
+/* Studio Summary Card (Bottom) */
+.studio-summary-card {
+  background: var(--color-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.summary-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 14px;
+}
+
+.summary-detail-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.summary-detail-item strong {
+  color: var(--color-text-primary);
+}
+
+.studio-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.studio-price-label {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.studio-price-value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.btn-add-custom-paddock {
+  width: 100%;
+  padding: 16px;
+  background: var(--color-primary);
+  color: #FFF;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px var(--color-primary-glow);
+}
+
+.btn-add-custom-paddock:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--color-primary-glow);
+}
+
+@media (max-width: 1024px) {
+  .studio-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .studio-stage-column {
+    position: static;
+  }
+
+  .colors-grid-studio {
+    grid-template-columns: 1fr;
+  }
+
+  .cockpit-select-grid {
+    grid-template-columns: 1fr;
+  }
+}
