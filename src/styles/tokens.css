@@ -1,0 +1,70 @@
+:root {
+  /* Cores Principais - VELOCITY.LAB Dark Aesthetics */
+  --color-bg: #0F1012;
+  --color-bg-secondary: #16171A;
+  --color-surface: #1C1E22;
+  --color-surface-hover: #25282E;
+  --color-surface-glass: rgba(22, 23, 26, 0.82);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Acentos de Alta Performance */
+  --color-primary: #E31B23;
+  --color-primary-hover: #FF2A33;
+  --color-primary-glow: rgba(227, 27, 35, 0.35);
+  --color-primary-soft: rgba(227, 27, 35, 0.12);
+
+  /* Acentos Auxiliares */
+  --color-electric-green: #00E676;
+  --color-electric-green-soft: rgba(0, 230, 118, 0.12);
+  --color-titanium: #A0A5B0;
+  --color-gold: #FFD166;
+
+  /* Tipografia & Contrastes */
+  --color-text-primary: #F8F9FA;
+  --color-text-secondary: #B0B5C0;
+  --color-text-muted: #6B7280;
+  --color-text-inverse: #0F1012;
+
+  /* Bordas e Divisores */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-focus: var(--color-primary);
+
+  /* Tipografia */
+  --font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Espaçamentos */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+
+  --max-width-container: 1320px;
+  --gutter-desktop: 32px;
+  --gutter-mobile: 16px;
+
+  /* Raios de Borda (Estilo Usinado e Preciso) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Sombras & Profundidade */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.8);
+  --shadow-glow: 0 0 25px var(--color-primary-glow);
+  --shadow-glow-green: 0 0 20px rgba(0, 230, 118, 0.25);
+
+  /* Transições de Corrida */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
